@@ -1,0 +1,28 @@
+import java.util.* ; 
+public class ArrayL{
+   public static void main(String[] args){
+       List<String> l = new ArrayList<>() ; 
+       l.add("White") ; 
+       l.add("Blue") ; 
+       l.add("Black") ; 
+       l.add("red") ; 
+       System.out.println(l) ;
+       for(String s: l){
+          System.out.print(s+" ") ;
+       }
+       Iterator<String> iterator = l.iterator() ; 
+       System.out.println("\nWith iterator ") ; 
+       while(iterator.hasNext()){
+           System.out.print(iterator.next() + " ") ; 
+       }
+       System.out.println("\nWith for loop ") ; 
+       for(int i = l.size()-1 ; i >= 0 ; i--){
+           System.out.print(l.get(i)+" ") ; 
+       }
+       ListIterator<String> listIterator = l.listIterator(l.size()) ; 
+       System.out.println("\n With ListIterator " ) ; 
+       while(listIterator.hasPrevious()){
+           System.out.print(listIterator.previous() + " " ) ; 
+       }
+   }
+}
